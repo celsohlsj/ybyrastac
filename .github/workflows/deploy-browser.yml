@@ -28,7 +28,7 @@ jobs:
           npm ci
           CATALOG_URL="https://celsohlsj.github.io/ybyrastac/stac_catalog/catalog.json" \
           PATH_PREFIX="/ybyrastac/" \
-          npm run build -- --historyMode=hash
+          npm run build
           cd ..
           mkdir -p _site
           cp -r _browser/dist/* _site/
