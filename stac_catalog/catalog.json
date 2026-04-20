@@ -6,13 +6,13 @@
   "links": [
     {
       "rel": "root",
-      "href": "./catalog.json",
+      "href": "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json",
       "type": "application/json",
       "title": "YbYrá-BR STAC Catalog"
     },
     {
       "rel": "child",
-      "href": "./fragmentation/ybyra-mspa-ma/collection.json",
+      "href": "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/fragmentation/ybyra-mspa-ma/collection.json",
       "type": "application/json",
       "title": "MSPA — Maranhão"
     }
