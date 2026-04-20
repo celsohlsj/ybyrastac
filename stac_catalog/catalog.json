@@ -2,20 +2,20 @@
   "type": "Catalog",
   "id": "ybyra-br",
   "stac_version": "1.0.0",
-  "description": "YbYr\u00e1STAC: Brazilian forest EO products (YbYr\u00e1-BR / CCAL-IPAM / GCBC).",
+  "description": "YbYráSTAC: Brazilian forest EO products (YbYrá-BR / CCAL-IPAM / GCBC).",
   "links": [
     {
       "rel": "root",
       "href": "./catalog.json",
       "type": "application/json",
-      "title": "YbYr\u00e1-BR STAC Catalog"
+      "title": "YbYrá-BR STAC Catalog"
     },
     {
       "rel": "child",
-      "href": "./ybyra-mspa-ma/collection.json",
+      "href": "./fragmentation/ybyra-mspa-ma/collection.json",
       "type": "application/json",
-      "title": "MSPA \u2014 Maranh\u00e3o"
+      "title": "MSPA — Maranhão"
     }
   ],
-  "title": "YbYr\u00e1-BR STAC Catalog"
+  "title": "YbYrá-BR STAC Catalog"
 }
