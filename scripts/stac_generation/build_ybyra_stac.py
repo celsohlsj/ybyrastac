@@ -153,7 +153,7 @@ def make_item(
     bbox, footprint, gsd, epsg = bbox_footprint_meta(tif)
     href = f"{base_href}/{theme}/{collection_id}/v{version}/{tif.name}"
     item = pystac.Item(
-        id=f"{collection_id}_{tif.stem}",
+        id=f"{collection_id}_{year}",
         geometry=footprint,
         bbox=bbox,
         datetime=datetime(year, 1, 1, tzinfo=timezone.utc),
@@ -161,7 +161,7 @@ def make_item(
             "start_datetime": f"{year}-01-01T00:00:00Z",
             "end_datetime":   f"{year}-12-31T23:59:59Z",
             "version": version,
-            "gsd": gsd,
+            "gsd": 30,
             "proj:epsg": epsg,
         },
     )
