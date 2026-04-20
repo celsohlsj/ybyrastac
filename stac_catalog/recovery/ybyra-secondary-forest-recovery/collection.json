@@ -1,0 +1,114 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "ybyra-secondary-forest-recovery",
+  "title": "Secondary Forest Biomass Recovery — Brazil (Chapman-Richards, 1986–2100)",
+  "description": "Pixel-level aboveground biomass (AGB) recovery projections for Brazilian secondary forests under two scenarios, modelled with the Chapman-Richards growth function using parameters from Robinson et al. (2025, Nature Climate Change). Scenario A (baseline, no-fire legacy): uses k₀ from Robinson et al. 2025 global rasters. Scenario B (fire legacy): uses kf_2024 adjusted by fire exposure. Asymptote A: aboveground biomass from Brazil's 4th National GHG Inventory map. Growth exponent m = 0.67 (Bukoski et al. 2022). Beta (allometric): β = 0.4638 (Heinrich et al. 2021). QCN asymptote layer applied. Annual GeoTIFFs exported for 2030, 2050, 2075, 2100 milestones plus full time-series as Zarr. Resolution 30 m, EPSG:4674.",
+  "license": "CC-BY-4.0",
+  "keywords": ["secondary forest", "biomass recovery", "Chapman-Richards", "carbon", "REDD+", "Robinson 2025", "Brazil", "YbYrá-BR"],
+  "providers": [
+    { "name": "IPAM / CCAL / UFMA", "roles": ["producer","processor"], "url": "https://ipam.org.br" },
+    { "name": "GCBC / UK PACT",     "roles": ["funder"],               "url": "https://www.ukclimatefinance.co.uk" }
+  ],
+  "extent": {
+    "spatial": { "bbox": [[ -73.99, -33.75, -28.85, 5.27 ]] },
+    "temporal": { "interval": [[ "1986-01-01T00:00:00Z", "2100-12-31T23:59:59Z" ]] }
+  },
+  "summaries": {
+    "gsd": [30],
+    "proj:epsg": [4674],
+    "version": ["1.0"],
+    "ybyra:scenarios": {
+      "A": {
+        "name": "Baseline (no-fire legacy)",
+        "k_source": "Robinson et al. 2025 — k₀ rasters",
+        "description": "Maximum recovery rate without fire disturbance legacy."
+      },
+      "B": {
+        "name": "Fire legacy",
+        "k_source": "Robinson et al. 2025 — kf_2024 adjusted",
+        "description": "Recovery rate suppressed by cumulative fire exposure through 2024."
+      }
+    },
+    "ybyra:model": "Chapman-Richards",
+    "ybyra:parameters": {
+      "m": 0.67,
+      "beta": 0.4638,
+      "asymptote_A_source": "Brazil 4th National GHG Inventory AGB map",
+      "k_source": "Robinson et al. 2025 (Nature Climate Change)"
+    },
+    "ybyra:milestone_years": [2030, 2050, 2075, 2100],
+    "ybyra:units": "Mg AGB ha⁻¹",
+    "ybyra:formats": {
+      "annual_timeseries": "Zarr store (dim: time × y × x × scenario)",
+      "milestones": "COG GeoTIFF per year per scenario (17 exports total)"
+    }
+  },
+  "item_assets": {
+    "timeseries_zarr": {
+      "title": "Full annual time-series 1986–2100 (Zarr)",
+      "type": "application/vnd+zarr",
+      "roles": ["data"],
+      "description": "Lazy-loadable Zarr store with dims (time, y, x, scenario). Recommended for Python/xarray workflows."
+    },
+    "scenario_a_2030": {
+      "title": "Scenario A — AGB 2030 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_b_2030": {
+      "title": "Scenario B — AGB 2030 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_a_2050": {
+      "title": "Scenario A — AGB 2050 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_b_2050": {
+      "title": "Scenario B — AGB 2050 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_a_2075": {
+      "title": "Scenario A — AGB 2075 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_b_2075": {
+      "title": "Scenario B — AGB 2075 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_a_2100": {
+      "title": "Scenario A — AGB 2100 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    },
+    "scenario_b_2100": {
+      "title": "Scenario B — AGB 2100 (COG)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": -9999, "unit": "Mg AGB/ha" }]
+    }
+  },
+  "links": [
+    { "rel": "self",    "href": "./collection.json",  "type": "application/json" },
+    { "rel": "root",    "href": "../../catalog.json", "type": "application/json" },
+    { "rel": "parent",  "href": "../catalog.json",    "type": "application/json" },
+    { "rel": "related", "href": "../../primary-forest/ybyra-primary-forest/collection.json",
+      "type": "application/json", "title": "Primary Forest mask (brazilForests)" },
+    { "rel": "derived_from",
+      "href": "https://doi.org/10.1038/s41558-025-02282-3",
+      "title": "Robinson et al. 2025, Nature Climate Change" },
+    { "rel": "cite-as", "href": "https://doi.org/10.5281/zenodo.XXXXXXX" }
+  ]
+}

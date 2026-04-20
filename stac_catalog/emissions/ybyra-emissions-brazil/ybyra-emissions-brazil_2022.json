@@ -1,0 +1,66 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "ybyra-emissions-brazil_2022",
+  "collection": "ybyra-emissions-brazil",
+  "bbox": [-73.99, -33.75, -28.85, 5.27],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-73.99,-33.75],[-28.85,-33.75],[-28.85,5.27],[-73.99,5.27],[-73.99,-33.75]
+    ]]
+  },
+  "properties": {
+    "datetime": "2022-01-01T00:00:00Z",
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime":   "2022-12-31T23:59:59Z",
+    "version": "1.0",
+    "gsd": 30,
+    "proj:epsg": 4674,
+    "ybyra:mask": "brazilForests applied to ALL input layers",
+    "ybyra:notes": "2022: Brazilian National FREL exceeded by 37% (246 Mt CO2 eq). Ref: Silva Junior et al., Nature Comm. (under revision)."
+  },
+  "assets": {
+    "deforestation_co2": {
+      "href": "https://data.source.coop/celsohlsj/ybyra-br/emissions/ybyra-emissions-brazil/v1.0/deforestation_co2_2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "title": "Deforestation CO₂ — 2022",
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CO2 eq/pixel/year" }]
+    },
+    "deforestation_ch4": {
+      "href": "https://data.source.coop/celsohlsj/ybyra-br/emissions/ybyra-emissions-brazil/v1.0/deforestation_ch4_2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "title": "Deforestation CH₄ — 2022",
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CH4/pixel/year" }]
+    },
+    "deforestation_n2o": {
+      "href": "https://data.source.coop/celsohlsj/ybyra-br/emissions/ybyra-emissions-brazil/v1.0/deforestation_n2o_2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "title": "Deforestation N₂O — 2022",
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg N2O/pixel/year" }]
+    },
+    "fire_co2": {
+      "href": "https://data.source.coop/celsohlsj/ybyra-br/emissions/ybyra-emissions-brazil/v1.0/fire_co2_2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "title": "Fire CO₂ Amazon — 2022",
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CO2 eq/pixel/year" }]
+    },
+    "selective_logging_co2": {
+      "href": "https://data.source.coop/celsohlsj/ybyra-br/emissions/ybyra-emissions-brazil/v1.0/selective_logging_co2_2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "title": "Selective Logging CO₂ Amazon — 2022",
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CO2 eq/pixel/year" }]
+    }
+  },
+  "links": [
+    { "rel": "self",       "href": "./ybyra-emissions-brazil_2022.json", "type": "application/json" },
+    { "rel": "collection", "href": "./collection.json",                  "type": "application/json" },
+    { "rel": "parent",     "href": "./collection.json",                  "type": "application/json" },
+    { "rel": "root",       "href": "../../catalog.json",                 "type": "application/json" }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "ybyra-emissions-brazil",
+  "title": "Unified GHG Emissions — Brazil (Deforestation, Fire, Selective Logging)",
+  "description": "Annual pixel-level greenhouse gas emission rasters for Brazil, unifying six biome-specific scripts into a single ImageCollection export pipeline (CCAL/IPAM). Three emission sources: (1) deforestation (PRODES-based, CO₂/CH₄/N₂O), (2) forest fire (Amazon only), (3) selective logging (Amazon only). brazilForests mask applied to ALL input data layers before emission estimation (methodological requirement: only forested areas contribute). Biome-specific combustion fraction: COMBUST_FRAC = 0.368 (Amazon), 0.379 (Cerrado). Resolution 30 m, EPSG:4674, annual, 1985–2023.",
+  "license": "CC-BY-4.0",
+  "keywords": ["GHG", "emissions", "CO2", "CH4", "N2O", "deforestation", "fire", "selective logging", "REDD+", "Brazil", "CCAL", "IPAM"],
+  "providers": [
+    { "name": "IPAM — CCAL",        "roles": ["producer", "processor"], "url": "https://ipam.org.br" },
+    { "name": "INPE — PRODES",      "roles": ["licensor"],              "url": "https://prodes.inpe.br" },
+    { "name": "MapBiomas Fire Col 4","roles": ["licensor"],              "url": "https://mapbiomas.org" }
+  ],
+  "extent": {
+    "spatial": { "bbox": [[ -73.99, -33.75, -28.85, 5.27 ]] },
+    "temporal": { "interval": [[ "1985-01-01T00:00:00Z", "2023-12-31T23:59:59Z" ]] }
+  },
+  "summaries": {
+    "gsd": [30],
+    "proj:epsg": [4674],
+    "version": ["1.0"],
+    "ybyra:gases": ["CO2", "CH4", "N2O"],
+    "ybyra:emission_sources": ["deforestation", "fire", "selective_logging"],
+    "ybyra:biomes_covered": {
+      "deforestation": ["Amazon","Cerrado","Caatinga","Mata Atlântica","Pampa","Pantanal"],
+      "fire":          ["Amazon"],
+      "selective_logging": ["Amazon"]
+    },
+    "ybyra:combustion_fraction": {
+      "Amazon":  0.368,
+      "Cerrado": 0.379
+    },
+    "ybyra:mask": "brazilForests applied to ALL input layers (PRODES mask, carbon pools, fire, selective logging)",
+    "ybyra:units": "Mg CO₂ eq pixel⁻¹ year⁻¹",
+    "ybyra:carbon_pools": ["AGB", "BGB", "deadwood", "litter", "soil_organic_carbon"]
+  },
+  "item_assets": {
+    "deforestation_co2": {
+      "title": "Deforestation CO₂ emissions",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CO2 eq/pixel/year" }]
+    },
+    "deforestation_ch4": {
+      "title": "Deforestation CH₄ emissions",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CH4/pixel/year" }]
+    },
+    "deforestation_n2o": {
+      "title": "Deforestation N₂O emissions",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg N2O/pixel/year" }]
+    },
+    "fire_co2": {
+      "title": "Fire CO₂ emissions (Amazon only)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CO2 eq/pixel/year" }]
+    },
+    "selective_logging_co2": {
+      "title": "Selective logging CO₂ emissions (Amazon only)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "raster:bands": [{ "data_type": "float32", "nodata": 0, "unit": "Mg CO2 eq/pixel/year" }]
+    }
+  },
+  "links": [
+    { "rel": "self",    "href": "./collection.json",                           "type": "application/json" },
+    { "rel": "root",    "href": "../../catalog.json",                          "type": "application/json" },
+    { "rel": "parent",  "href": "../catalog.json",                             "type": "application/json" },
+    { "rel": "related", "href": "../primary-forest/ybyra-primary-forest/collection.json",
+      "type": "application/json", "title": "Primary Forest mask (brazilForests)" },
+    { "rel": "cite-as", "href": "https://doi.org/10.5281/zenodo.XXXXXXX" }
+  ]
+}

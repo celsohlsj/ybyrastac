@@ -1,0 +1,14 @@
+{
+  "type": "Catalog",
+  "id": "fragmentation",
+  "stac_version": "1.0.0",
+  "title": "Fragmentation (MSPA)",
+  "description": "Morphological Spatial Pattern Analysis (MSPA) products for Maranhão and Brazil.",
+  "links": [
+    { "rel": "self",   "href": "./catalog.json",                          "type": "application/json" },
+    { "rel": "root",   "href": "../catalog.json",                         "type": "application/json" },
+    { "rel": "parent", "href": "../catalog.json",                         "type": "application/json" },
+    { "rel": "child",  "href": "./ybyra-mspa-ma/collection.json",         "type": "application/json", "title": "MSPA Maranhão" },
+    { "rel": "child",  "href": "./ybyra-mspa-br/collection.json",         "type": "application/json", "title": "MSPA Brasil" }
+  ]
+}

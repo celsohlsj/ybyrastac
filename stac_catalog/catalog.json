@@ -1,0 +1,16 @@
+{
+  "type": "Catalog",
+  "id": "ybyra-br",
+  "stac_version": "1.0.0",
+  "description": "YbYráSTAC: Brazilian forest EO products from the YbYrá-BR / CCAL-IPAM / GCBC projects.",
+  "title": "YbYrá-BR STAC Catalog",
+  "links": [
+    { "rel": "self", "href": "./catalog.json", "type": "application/json" },
+    { "rel": "root", "href": "./catalog.json", "type": "application/json" },
+    { "rel": "child", "href": "./fragmentation/catalog.json", "type": "application/json", "title": "Fragmentation (MSPA)" },
+    { "rel": "child", "href": "./emissions/catalog.json",    "type": "application/json", "title": "Emissions" },
+    { "rel": "child", "href": "./fire/catalog.json",         "type": "application/json", "title": "Fire" },
+    { "rel": "child", "href": "./recovery/catalog.json",     "type": "application/json", "title": "Secondary forest recovery" },
+    { "rel": "child", "href": "./primary-forest/catalog.json","type": "application/json","title": "Primary forest" }
+  ]
+}

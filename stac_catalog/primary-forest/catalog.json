@@ -1,0 +1,13 @@
+{
+  "type": "Catalog",
+  "id": "primary-forest",
+  "stac_version": "1.0.0",
+  "title": "Primary Forest",
+  "description": "MapBiomas Collection 10.1 primary vegetation mask remapped to binary, with brazilForests quality-control filter.",
+  "links": [
+    { "rel": "self",   "href": "./catalog.json",                                  "type": "application/json" },
+    { "rel": "root",   "href": "../catalog.json",                                 "type": "application/json" },
+    { "rel": "parent", "href": "../catalog.json",                                 "type": "application/json" },
+    { "rel": "child",  "href": "./ybyra-primary-forest/collection.json",          "type": "application/json", "title": "Primary Forest Brazil" }
+  ]
+}

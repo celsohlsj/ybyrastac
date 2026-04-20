@@ -1,0 +1,46 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "ybyra-mspa-ma_2023",
+  "collection": "ybyra-mspa-ma",
+  "bbox": [-48.75, -10.30, -41.80, -1.05],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+      [-48.75, -10.30], [-41.80, -10.30], [-41.80, -1.05], [-48.75, -1.05], [-48.75, -10.30]
+    ]]
+  },
+  "properties": {
+    "datetime": "2023-01-01T00:00:00Z",
+    "start_datetime": "2023-01-01T00:00:00Z",
+    "end_datetime": "2023-12-31T23:59:59Z",
+    "version": "1.0",
+    "gsd": 30,
+    "proj:epsg": 4674,
+    "processing:software": "GuidosToolbox mspa_lin64",
+    "processing:parameters": {
+      "EEW": 34,
+      "FGCONN": 8,
+      "TRANSITION": 1,
+      "INTERNAL": 1
+    },
+    "ybyra:mask": "brazil_pret_vegetation_qcn_v2 (remapped to binary)"
+  },
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/celsohlsj/ybyra-br/fragmentation/ybyra-mspa-ma/v1.0/ybyra-mspa-ma_2023.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": ["data"],
+      "title": "MSPA classes — Maranhão 2023 (COG)",
+      "raster:bands": [
+        { "data_type": "uint8", "nodata": 0, "spatial_resolution": 30 }
+      ]
+    }
+  },
+  "links": [
+    { "rel": "self",       "href": "./ybyra-mspa-ma_2023.json",  "type": "application/json" },
+    { "rel": "collection", "href": "./collection.json",          "type": "application/json" },
+    { "rel": "parent",     "href": "./collection.json",          "type": "application/json" },
+    { "rel": "root",       "href": "../../catalog.json",         "type": "application/json" }
+  ]
+}

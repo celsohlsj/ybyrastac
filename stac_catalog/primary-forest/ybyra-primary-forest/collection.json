@@ -1,0 +1,32 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "ybyra-primary-forest",
+  "title": "Primary Forest Mask Brazil — MapBiomas Col 10.1",
+  "description": "Annual binary primary forest mask for Brazil derived from MapBiomas Collection 10.1 primary vegetation layer (asset: brazil_pret_vegetation_qcn_v2). Post-1985 secondary vegetation excluded. brazilForests quality-control mask applied. Values: 1 = primary forest, 0 = non-forest/background. Exported as COG, 30 m, EPSG:4674, multibanda annual stack (1985–2023).",
+  "license": "CC-BY-4.0",
+  "keywords": ["primary forest", "MapBiomas", "Brazil", "deforestation", "REDD+", "QCN"],
+  "providers": [
+    { "name": "IPAM / CCAL",  "roles": ["processor"],          "url": "https://ipam.org.br" },
+    { "name": "MapBiomas",    "roles": ["producer","licensor"], "url": "https://mapbiomas.org" }
+  ],
+  "extent": {
+    "spatial": { "bbox": [[ -73.99, -33.75, -28.85, 5.27 ]] },
+    "temporal": { "interval": [[ "1985-01-01T00:00:00Z", "2023-12-31T23:59:59Z" ]] }
+  },
+  "summaries": {
+    "gsd": [30],
+    "proj:epsg": [4674],
+    "version": ["1.0"],
+    "platform": ["Landsat"],
+    "ybyra:source_asset": "brazil_pret_vegetation_qcn_v2",
+    "ybyra:source_collection": "MapBiomas Collection 10.1",
+    "ybyra:mask_applied": "brazilForests (binary) — post-1985 secondary vegetation excluded"
+  },
+  "links": [
+    { "rel": "self",   "href": "./collection.json",  "type": "application/json" },
+    { "rel": "root",   "href": "../../catalog.json", "type": "application/json" },
+    { "rel": "parent", "href": "../catalog.json",    "type": "application/json" },
+    { "rel": "cite-as","href": "https://doi.org/10.5281/zenodo.XXXXXXX" }
+  ]
+}

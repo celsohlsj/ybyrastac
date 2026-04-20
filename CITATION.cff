@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use YbYráSTAC, please cite it as below."
+title: "YbYráSTAC: A toolbox for accessing Brazilian forest Earth Observation datasets via STAC"
+version: "0.1.0"
+date-released: "2026-04-19"
+license: EUPL-1.2
+repository-code: "https://github.com/celsohlsj/ybyrastac"
+url: "https://ybyrastac.readthedocs.io/"
+authors:
+  - family-names: "Silva Junior"
+    given-names: "Celso Henrique Leite"
+    orcid: "https://orcid.org/0000-0002-7959-4138"
+    affiliation: "IPAM / UFMA"
+keywords:
+  - STAC
+  - forest
+  - Brazil
+  - Amazon
+  - remote-sensing
+  - MSPA
+  - REDD+
