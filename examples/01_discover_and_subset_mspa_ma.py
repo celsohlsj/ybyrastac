@@ -1,7 +1,7 @@
 """
-Exemplo 01 — Descoberta e recorte de MSPA-MA.
+Exemplo 01 — Descoberta e recorte de Secondary Forest Brazil.
 
-    python examples/01_discover_and_subset_mspa_ma.py
+    python examples/01_discover_and_subset_secondary_forest.py
 """
 
 import geopandas as gpd
@@ -11,17 +11,17 @@ CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
 
 disc = DiscoveryProvider(CATALOG)
 print("Temas:", disc.list_themes())
-print("Coleções em 'fragmentation':")
-for c in disc.list_collections(theme="fragmentation"):
+print("Coleções em 'secondary-forest':")
+for c in disc.list_collections(theme="secondary-forest"):
     print(" -", c["id"], "|", c["title"])
 
 cog = COGProvider(CATALOG)
-ds = cog.open_dataset("ybyra-mspa-ma", version="1.0", years=[2020, 2021, 2022, 2023])
+ds = cog.open_dataset("ybyra-secondary-forest-brazil", version="8.1", years=[2020, 2021, 2022, 2023, 2024])
 print(ds)
 
-ma = gpd.read_file(
-    "https://raw.githubusercontent.com/giuliano-macedo/geodata-br-states/main/geojson/br_states/br_ma.json"
-).geometry.iloc[0]
-ds_sub = subset(ds, geometry=ma, crs="EPSG:4674")
-ds_sub.to_netcdf("mspa_ma_2020_2023.nc")
-print("✓ salvou mspa_ma_2020_2023.nc")
+br = gpd.read_file(
+    "https://raw.githubusercontent.com/giuliano-macedo/geodata-br-states/main/geojson/br_states/br_all.json"
+).geometry.dissolve().iloc[0]
+ds_sub = subset(ds, geometry=br, crs="EPSG:4674")
+ds_sub.to_netcdf("secondary_forest_brazil_2020_2024.nc")
+print("✓ salvou secondary_forest_brazil_2020_2024.nc")

@@ -4,7 +4,8 @@ O catálogo YbYráSTAC está organizado em 5 temas:
 
 | Tema | Coleções | Cobertura |
 |------|---------|-----------|
-| `fragmentation`  | `ybyra-mspa-ma`, `ybyra-mspa-br` | Maranhão e Brasil |
+| `secondary-forest` | `ybyra-secondary-forest-brazil`  | Brasil (MapBiomas 10.1, 1986–2024) |
+| `fragmentation`  | `ybyra-mspa-br`                  | Brasil |
 | `primary-forest` | `ybyra-primary-forest`           | Brasil (MapBiomas 10.1) |
 | `emissions`      | `ybyra-emissions-brazil`         | Brasil (5 biomas) |
 | `fire`           | `ybyra-fire-probability-pa`      | Pará |

@@ -1,0 +1,78 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [],
+  "id": "ybyra-secondary-forest-brazil_1994",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -73.99,
+          -33.75
+        ],
+        [
+          -28.85,
+          -33.75
+        ],
+        [
+          -28.85,
+          5.27
+        ],
+        [
+          -73.99,
+          5.27
+        ],
+        [
+          -73.99,
+          -33.75
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -73.99,
+    -33.75,
+    -28.85,
+    5.27
+  ],
+  "properties": {
+    "start_datetime": "1994-01-01T00:00:00Z",
+    "end_datetime": "1994-12-31T23:59:59Z",
+    "version": "8.1",
+    "gsd": 30,
+    "proj:epsg": 4674,
+    "datetime": "1994-01-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../collection.json",
+      "type": "application/json",
+      "title": "Secondary Forest Brazil — YbYrá-BR v8.1"
+    },
+    {
+      "rel": "collection",
+      "href": "../../collection.json",
+      "type": "application/json",
+      "title": "Secondary Forest Brazil — YbYrá-BR v8.1"
+    },
+    {
+      "rel": "parent",
+      "href": "../../collection.json",
+      "type": "application/json",
+      "title": "Secondary Forest Brazil — YbYrá-BR v8.1"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/ybyra-br/secondary-forest/v8.1/brazil_secondary_forest_1994.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Secondary Forest Brazil 1994",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "collection": "ybyra-secondary-forest-brazil"
+}
