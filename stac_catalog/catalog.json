@@ -12,9 +12,9 @@
     },
     {
       "rel": "child",
-      "href": "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/fragmentation/ybyra-mspa-ma/collection.json",
+      "href": "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/secondary-forest/ybyra-secondary-forest-brazil/collection.json",
       "type": "application/json",
-      "title": "MSPA — Maranhão"
+      "title": "Secondary Forest Brazil — YbYrá-BR v8.1"
     }
   ],
   "title": "YbYrá-BR STAC Catalog"

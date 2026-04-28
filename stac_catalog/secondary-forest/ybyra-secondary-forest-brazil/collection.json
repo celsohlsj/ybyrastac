@@ -1,0 +1,287 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "ybyra-secondary-forest-brazil",
+  "title": "Secondary Forest Brazil — YbYrá-BR v8.1",
+  "description": "Annual binary maps of secondary forests in Brazil derived from MapBiomas Collection 10.1, covering 1986–2024. Values: 1 = secondary forest, 0 = non-secondary forest/background. brazilForests quality-control mask applied. Exported as COG, 30 m, EPSG:4674.",
+  "license": "CC-BY-4.0",
+  "version": "8.1",
+  "keywords": [
+    "secondary forest",
+    "MapBiomas",
+    "Brazil",
+    "REDD+",
+    "forest regeneration",
+    "YbYrá-BR"
+  ],
+  "providers": [
+    {
+      "name": "IPAM / CCAL",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://ipam.org.br"
+    },
+    {
+      "name": "MapBiomas",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://mapbiomas.org"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -73.99,
+          -33.75,
+          -28.85,
+          5.27
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1986-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "gsd": [
+      30
+    ],
+    "proj:epsg": [
+      4674
+    ],
+    "version": [
+      "8.1"
+    ],
+    "platform": [
+      "Landsat"
+    ],
+    "ybyra:source_collection": "MapBiomas Collection 10.1",
+    "ybyra:mask_applied": "brazilForests (binary)"
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://source.coop/ybyra-br/secondary-forest",
+      "title": "Source Cooperative repository"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1986/ybyra-secondary-forest-brazil_1986.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1987/ybyra-secondary-forest-brazil_1987.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1988/ybyra-secondary-forest-brazil_1988.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1989/ybyra-secondary-forest-brazil_1989.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1990/ybyra-secondary-forest-brazil_1990.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1991/ybyra-secondary-forest-brazil_1991.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1992/ybyra-secondary-forest-brazil_1992.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1993/ybyra-secondary-forest-brazil_1993.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1994/ybyra-secondary-forest-brazil_1994.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1995/ybyra-secondary-forest-brazil_1995.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1996/ybyra-secondary-forest-brazil_1996.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1997/ybyra-secondary-forest-brazil_1997.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1998/ybyra-secondary-forest-brazil_1998.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_1999/ybyra-secondary-forest-brazil_1999.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2000/ybyra-secondary-forest-brazil_2000.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2001/ybyra-secondary-forest-brazil_2001.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2002/ybyra-secondary-forest-brazil_2002.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2003/ybyra-secondary-forest-brazil_2003.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2004/ybyra-secondary-forest-brazil_2004.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2005/ybyra-secondary-forest-brazil_2005.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2006/ybyra-secondary-forest-brazil_2006.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2007/ybyra-secondary-forest-brazil_2007.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2008/ybyra-secondary-forest-brazil_2008.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2009/ybyra-secondary-forest-brazil_2009.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2010/ybyra-secondary-forest-brazil_2010.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2011/ybyra-secondary-forest-brazil_2011.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2012/ybyra-secondary-forest-brazil_2012.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2013/ybyra-secondary-forest-brazil_2013.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2014/ybyra-secondary-forest-brazil_2014.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2015/ybyra-secondary-forest-brazil_2015.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2016/ybyra-secondary-forest-brazil_2016.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2017/ybyra-secondary-forest-brazil_2017.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2018/ybyra-secondary-forest-brazil_2018.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2019/ybyra-secondary-forest-brazil_2019.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2020/ybyra-secondary-forest-brazil_2020.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2021/ybyra-secondary-forest-brazil_2021.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2022/ybyra-secondary-forest-brazil_2022.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2023/ybyra-secondary-forest-brazil_2023.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./ybyra-secondary-forest-brazil_2024/ybyra-secondary-forest-brazil_2024.json",
+      "type": "application/geo+json"
+    }
+  ]
+}

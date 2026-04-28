@@ -7,7 +7,7 @@ a partir de um diretório local de COGs (organizados por produto/versão).
 
 Estrutura esperada em --input-root:
     <input-root>/
-      fragmentation/ybyra-mspa-ma/v1.0/*.tif
+      secondary-forest/ybyra-secondary-forest-brazil/v8.1/*.tif
       fragmentation/ybyra-mspa-br/v1.0/*.tif
       primary-forest/ybyra-primary-forest/v1.0/*.tif
       emissions/ybyra-emissions-brazil/v1.0/*.tif   (prefixo: deforestation_co2_, fire_co2_, ...)
@@ -41,12 +41,12 @@ YEAR_RE = re.compile(r"(\d{4})")
 # Configurações de cada coleção
 # ------------------------------------------------------------------
 COLLECTIONS = {
-    "ybyra-mspa-ma": {
-        "theme": "fragmentation",
-        "title": "MSPA — Maranhão",
+    "ybyra-secondary-forest-brazil": {
+        "theme": "secondary-forest",
+        "title": "Secondary Forest Brazil — YbYrá-BR v8.1",
         "description": (
-            "Annual MSPA of MapBiomas Col 10.1 primary forest for Maranhão. "
-            "EEW=34px, FGCONN=8, TRANSITION=1, INTERNAL=1. 30m EPSG:4674."
+            "Annual binary secondary forest maps for Brazil from MapBiomas Collection 10.1. "
+            "brazilForests mask applied. 30m EPSG:4674. 1986–2024."
         ),
         "asset_key": "data",
         "asset_media_type": pystac.MediaType.COG,

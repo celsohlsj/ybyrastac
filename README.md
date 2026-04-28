@@ -12,7 +12,7 @@ Inspirado em [eoforeststac](https://github.com/simonbesnard1/eoforeststac)
 
 | Coleção | Descrição | Resolução | Cobertura | Formato |
 |--------|-----------|-----------|-----------|---------|
-| `ybyra-mspa-ma` | Morphological Spatial Pattern Analysis — Maranhão | 30 m | MA, 1985–2023 | COG |
+| `ybyra-secondary-forest-brazil` | Secondary Forest Brazil — YbYrá-BR v8.1 (MapBiomas Col 10.1) | 30 m | BR, 1986–2024 | COG |
 | `ybyra-mspa-br` | MSPA para Brasil (biomas) | 30 m | BR, 1985–2023 | COG |
 | `ybyra-primary-forest` | Vegetação primária MapBiomas Col 10.1 (remapeada) | 30 m | BR | COG |
 | `ybyra-emissions-brazil` | Emissões unificadas (CO₂/CH₄/N₂O) — desmatamento, fogo, exploração seletiva | 30 m | BR, 1985–2023 | COG |
@@ -41,20 +41,20 @@ CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
 # 1. Descoberta
 disc = DiscoveryProvider(catalog_url=CATALOG)
 disc.list_themes()                      # ['fragmentation', 'emissions', ...]
-disc.list_collections(theme="fragmentation")
+disc.list_collections(theme="secondary-forest")
 
 # 2. Carregamento cloud-native (sem download)
 provider = COGProvider(catalog_url=CATALOG)
 ds = provider.open_dataset(
-    collection_id="ybyra-mspa-ma",
-    version="1.0",
-    years=[2020, 2023],
+    collection_id="ybyra-secondary-forest-brazil",
+    version="8.1",
+    years=[2020, 2022, 2024],
 )
 
 # 3. Recorte espacial
-ma = gpd.read_file("maranhao.geojson")
-ds_subset = subset(ds, geometry=ma.geometry.iloc[0], crs="EPSG:4674")
-ds_subset.rio.to_raster("mspa_ma_2020_2023.tif")
+br = gpd.read_file("brasil.geojson")
+ds_subset = subset(ds, geometry=br.geometry.iloc[0], crs="EPSG:4674")
+ds_subset.rio.to_raster("secondary_forest_brazil_2020_2024.tif")
 ```
 
 ## Browser interativo
