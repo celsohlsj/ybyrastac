@@ -27,7 +27,7 @@ Os dois componentes precisam de lugares distintos:
   `rioxarray.open_rasterio(url)` sem download.
 - Escala TB sem problema. **Requer aplicação como beta-tester**
   (resposta típica em dias para instituições acadêmicas).
-- **Melhor encaixe institucional**: IPAM + UFMA + GCBC se qualificam facilmente.
+- **Melhor encaixe institucional**: YbYrá-BR se qualifica facilmente.
 
 ### Hugging Face Datasets
 
