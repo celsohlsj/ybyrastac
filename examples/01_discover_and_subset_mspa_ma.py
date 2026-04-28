@@ -7,7 +7,7 @@ Exemplo 01 — Descoberta e recorte de Secondary Forest Brazil.
 import geopandas as gpd
 from ybyrastac import DiscoveryProvider, COGProvider, subset
 
-CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
+CATALOG = "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json"
 
 disc = DiscoveryProvider(CATALOG)
 print("Temas:", disc.list_themes())

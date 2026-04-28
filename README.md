@@ -2,7 +2,7 @@
 
 **YbYráSTAC** é uma biblioteca Python e catálogo STAC (SpatioTemporal Asset Catalog)
 para descoberta e acesso cloud-native aos produtos de Observação da Terra gerados
-no âmbito do projeto **YbYrá-BR / CCAL-IPAM / GCBC**, com foco em florestas
+no âmbito do projeto **YbYrá-BR**, com foco em florestas
 brasileiras, fragmentação, emissões, fogo e recuperação de vegetação secundária.
 
 Inspirado em [eoforeststac](https://github.com/simonbesnard1/eoforeststac)
@@ -36,7 +36,7 @@ from ybyrastac.providers.cog import COGProvider
 from ybyrastac.providers.subset import subset
 import geopandas as gpd
 
-CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
+CATALOG = "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json"
 
 # 1. Descoberta
 disc = DiscoveryProvider(catalog_url=CATALOG)
@@ -78,8 +78,8 @@ Dados: **CC-BY-4.0** (citação obrigatória).
 
 ## Financiamento
 
-CNPq (Bolsa PQ-C), IPAM, GCBC-UK, YbYrá-BR, UFMA/PPGBC.
+CNPq (Bolsa PQ-C), YbYrá-BR.
 
 ## Contato
 
-Celso H. L. Silva Junior — `celso.junior@ufma.br` / IPAM / UFMA
+Celso H. L. Silva Junior — `celso.junior@ufma.br`

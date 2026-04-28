@@ -7,7 +7,7 @@ Carrega MSPA-MA + Emissões-BR + Fogo-PA em uma grade comum (resolução do MSPA
 from ybyrastac import COGProvider
 from ybyrastac.utils import align_on_common_grid
 
-CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
+CATALOG = "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json"
 cog = COGProvider(CATALOG)
 
 mspa  = cog.open_dataset("ybyra-mspa-ma",           years=[2023])

@@ -13,7 +13,7 @@ Uso:
 
     # ou com opções:
     python scripts/stac_generation/build_ybyra_stac.py \\
-        --base-href https://data.source.coop/ybyra-br \\
+        --base-href https://source.coop/ybyra-br \\
         --out stac_catalog/ \\
         --collections ybyra-secondary-forest-brazil ybyra-mspa-br
 
@@ -544,8 +544,8 @@ def main():
     ap = argparse.ArgumentParser(description="Gera catálogo STAC YbYrá-BR (sem arquivos locais).")
     ap.add_argument(
         "--base-href",
-        default="https://data.source.coop/ybyra-br",
-        help="URL pública base do bucket (default: https://data.source.coop/ybyra-br)",
+        default="https://source.coop/ybyra-br",
+        help="URL pública base do bucket (default: https://source.coop/ybyra-br)",
     )
     ap.add_argument(
         "--out",

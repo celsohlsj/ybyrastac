@@ -1,7 +1,7 @@
 # YbYráSTAC
 
 Toolbox Python para acessar os produtos florestais do projeto YbYrá-BR
-(IPAM / UFMA / GCBC) via SpatioTemporal Asset Catalog.
+via SpatioTemporal Asset Catalog.
 
 ```{toctree}
 :maxdepth: 2
