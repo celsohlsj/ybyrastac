@@ -3,16 +3,14 @@ name: Deploy STAC Browser to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ["stac_catalog/**"]
+    paths: ["stac_catalog/**", ".github/workflows/deploy-browser.yml"]
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +24,7 @@ jobs:
           git clone --depth 1 https://github.com/radiantearth/stac-browser.git _browser
           cd _browser
           npm ci
-          CATALOG_URL="https://celsohlsj.github.io/ybyrastac/stac_catalog/catalog.json" \
+          CATALOG_URL="https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json" \
           PATH_PREFIX="/ybyrastac/" \
           npm run build
           cd ..
@@ -34,16 +32,11 @@ jobs:
           cp -r _browser/dist/* _site/
           cp -r stac_catalog _site/stac_catalog
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: _site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
