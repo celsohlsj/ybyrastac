@@ -5,6 +5,9 @@ para descoberta e acesso cloud-native aos produtos de Observação da Terra gera
 no âmbito do projeto **YbYrá-BR / CCAL-IPAM / GCBC**, com foco em florestas
 brasileiras, fragmentação, emissões, fogo e recuperação de vegetação secundária.
 
+Inspirado em [eoforeststac](https://github.com/simonbesnard1/eoforeststac)
+(Simon Besnard / GFZ), adaptado para o contexto brasileiro.
+
 ## Principais produtos do catálogo (piloto)
 
 | Coleção | Descrição | Resolução | Cobertura | Formato |
@@ -64,7 +67,7 @@ ds_subset.rio.to_raster("secondary_forest_brazil_2020_2024.tif")
 
 ## Licença
 
-Software: **EUPL-1.2**.
+Software: **EUPL-1.2** (compatível com eoforeststac original).
 Dados: **CC-BY-4.0** (citação obrigatória).
 
 ## Como citar

@@ -1,5 +1,7 @@
 """
 Discovery provider: browse themes, collections and versions in the YbYrá STAC.
+
+Adaptado de eoforeststac (Simon Besnard, GFZ; EUPL-1.2).
 """
 
 from __future__ import annotations
