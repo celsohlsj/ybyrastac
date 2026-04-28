@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from ybyrastac import COGProvider
 
-CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
+CATALOG = "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json"
 cog = COGProvider(CATALOG)
 
 # Carrega emissões de desmatamento CO2 para todos os anos disponíveis

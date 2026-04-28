@@ -108,7 +108,7 @@ aws s3 cp ./cog/ s3://source-coop/celsohlsj/ybyra-br/fragmentation/ybyra-mspa-ma
 ```
 
 6. URLs ficam públicas automaticamente:
-   `https://data.source.coop/celsohlsj/ybyra-br/fragmentation/ybyra-mspa-ma/v1.0/ybyra-mspa-ma_2023.tif`
+   `https://source.coop/ybyra-br/fragmentation/ybyra-mspa-ma/v1.0/ybyra-mspa-ma_2023.tif`
 
 ## Estimativa de volume para o YbYrá-BR
 

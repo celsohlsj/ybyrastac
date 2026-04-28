@@ -8,7 +8,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 from ybyrastac import ZarrProvider, subset
 
-CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
+CATALOG = "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json"
 zarr = ZarrProvider(CATALOG)
 
 # Carrega cubo completo (lazy via Dask)

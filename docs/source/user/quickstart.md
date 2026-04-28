@@ -3,7 +3,7 @@
 ```python
 from ybyrastac import DiscoveryProvider, COGProvider, subset
 
-CATALOG = "https://data.source.coop/celsohlsj/ybyra-br/catalog.json"
+CATALOG = "https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json"
 
 disc = DiscoveryProvider(CATALOG)
 disc.list_themes()
