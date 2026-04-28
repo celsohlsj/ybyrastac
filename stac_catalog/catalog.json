@@ -1,0 +1,27 @@
+{
+  "type": "Catalog",
+  "id": "ybyra-br",
+  "stac_version": "1.1.0",
+  "description": "YbYr\u00e1STAC: Brazilian forest Earth Observation datasets. YbYr\u00e1-BR Project. Funded by CNPq (Process 401741/2023-0).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "YbYr\u00e1-BR STAC Catalog"
+    },
+    {
+      "rel": "related",
+      "href": "https://github.com/celsohlsj/ybyrastac",
+      "title": "YbYr\u00e1STAC GitHub"
+    },
+    {
+      "rel": "child",
+      "href": "./ybyra-secondary-forest-brazil/collection.json",
+      "type": "application/json",
+      "title": "Secondary Forest Brazil \u2014 YbYr\u00e1-BR v8.1"
+    }
+  ],
+  "funding": "CNPq Process 401741/2023-0",
+  "title": "YbYr\u00e1-BR STAC Catalog"
+}
