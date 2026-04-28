@@ -24,8 +24,8 @@ jobs:
           git clone --depth 1 https://github.com/radiantearth/stac-browser.git _browser
           cd _browser
           npm ci
-          CATALOG_URL="https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json" \
-          PATH_PREFIX="/ybyrastac/browser/" \
+          SB_catalogUrl="https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json" \
+          SB_pathPrefix="/ybyrastac/browser/" \
           npm run build
           cd ..
           mkdir -p _site/browser
