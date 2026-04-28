@@ -24,13 +24,14 @@ jobs:
           git clone --depth 1 https://github.com/radiantearth/stac-browser.git _browser
           cd _browser
           npm ci
-          CATALOG_URL="https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json" \
-          PATH_PREFIX="/ybyrastac/" \
+          SB_catalogUrl="https://raw.githubusercontent.com/celsohlsj/ybyrastac/main/stac_catalog/catalog.json" \
+          SB_pathPrefix="/ybyrastac/browser/" \
           npm run build
           cd ..
-          mkdir -p _site
-          cp -r _browser/dist/* _site/
+          mkdir -p _site/browser
+          cp -r _browser/dist/* _site/browser/
           cp -r stac_catalog _site/stac_catalog
+          cp docs/landing/index.html _site/index.html
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
